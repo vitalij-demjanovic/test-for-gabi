@@ -9,7 +9,7 @@ export default function StepIndicator({
 }: StepIndicatorProps) {
   return (
     <div className='rounded-lg bg-white px-6 py-6 shadow-sm'>
-      <div className='flex items-center gap-3'>
+      <div className='flex flex-wrap items-center gap-3'>
         {Array.from({ length: totalSteps }).map((_, i) => {
           const step = i + 1;
           const isActive = step === currentStep;
