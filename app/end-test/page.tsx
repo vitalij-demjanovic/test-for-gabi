@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import QuizResult from '@/components/QuizResult';
 
 export default function Page() {
   const [step, setStep] = useState(0);
@@ -23,6 +24,9 @@ export default function Page() {
             Hotovo! Test máš za sebou – skvelá práca! 🥳 Ďakujeme, že si sa
             zapojila.
           </h1>
+          <div className='mb-10'>
+            <QuizResult />
+          </div>
           <h2 className='m-auto mb-10 max-w-[650px] text-3xl'>
             Tvoj darček je na dosah… priprav sa!
           </h2>

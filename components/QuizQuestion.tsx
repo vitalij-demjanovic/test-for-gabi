@@ -1,11 +1,9 @@
-'use client';
-
-import { useState } from 'react';
 import { Question } from '@/types/question';
+import { useState } from 'react';
 
 type Props = {
   question: Question;
-  onNext: () => void;
+  onNext: (isCorrect: boolean) => void; // pridáme parameter isCorrect
 };
 
 export default function QuizQuestion({ question, onNext }: Props) {
@@ -18,8 +16,10 @@ export default function QuizQuestion({ question, onNext }: Props) {
     setSelectedOption(option);
     setIsAnswered(true);
 
+    const isCorrect = option === question.correctAnswer;
+
     setTimeout(() => {
-      onNext();
+      onNext(isCorrect); // pošleme info, či odpoveď bola správna
       setSelectedOption(null);
       setIsAnswered(false);
     }, 1500);
