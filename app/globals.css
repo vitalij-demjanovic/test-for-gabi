@@ -4,8 +4,19 @@
 @tailwind utilities;
 
 
+body {
+  background: #fdf4eb;
+  color: #72655d;
+}
+
 .container {
   margin: 0 auto;
   max-width: 880px;
   padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #401316;
+  line-height: 1.2;
 }

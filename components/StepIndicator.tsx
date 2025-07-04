@@ -8,7 +8,7 @@ export default function StepIndicator({
   totalSteps
 }: StepIndicatorProps) {
   return (
-    <div className='rounded-lg bg-white px-6 py-6 shadow-sm'>
+    <div className='rounded-3xl bg-white px-6 py-6 shadow-sm'>
       <div className='flex flex-wrap items-center gap-3'>
         {Array.from({ length: totalSteps }).map((_, i) => {
           const step = i + 1;
@@ -19,7 +19,7 @@ export default function StepIndicator({
               key={step}
               className={`flex h-12 w-12 items-center justify-center rounded-xl text-sm font-semibold transition-all ${
                 isActive
-                  ? 'bg-indigo-500 text-white'
+                  ? 'bg-[#401316] text-white'
                   : 'border border-gray-200 bg-gray-100 text-gray-500'
               } `}
             >

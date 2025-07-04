@@ -18,13 +18,6 @@ export default function QuizQuestion({ question, onNext }: Props) {
     setSelectedOption(option);
     setIsAnswered(true);
 
-    if (option === question.correctAnswer) {
-      console.log('✅ Správne');
-    } else {
-      console.log('❌ Nesprávne');
-    }
-
-    // ⏳ Po 1.5 sekunde prejde na ďalšiu
     setTimeout(() => {
       onNext();
       setSelectedOption(null);
@@ -34,7 +27,7 @@ export default function QuizQuestion({ question, onNext }: Props) {
 
   return (
     <div>
-      <div className='mb-10 rounded-lg bg-white px-6 py-6 shadow-sm'>
+      <div className='mb-10 rounded-3xl bg-white px-6 py-6 shadow-sm'>
         <h1 className='text-xl font-bold'>{question.question}</h1>
         <p className='mt-2 text-sm text-gray-500'>
           Otázka od: <strong>{question.author}</strong>
@@ -46,7 +39,7 @@ export default function QuizQuestion({ question, onNext }: Props) {
           const isSelected = selectedOption === option;
           const isCorrect = option === question.correctAnswer;
 
-          let bgClass = 'bg-white text-gray-800 hover:bg-blue-100';
+          let bgClass = 'bg-white text-gray-800';
 
           if (isAnswered) {
             if (isCorrect) {
@@ -64,7 +57,7 @@ export default function QuizQuestion({ question, onNext }: Props) {
             <div
               key={index}
               onClick={() => handleClick(option)}
-              className={`cursor-pointer rounded-lg border px-6 py-6 text-center text-xl font-bold shadow-sm transition duration-300 ${bgClass}`}
+              className={`cursor-pointer rounded-3xl px-6 py-6 text-center text-xl font-bold shadow-sm transition duration-300 ${bgClass}`}
             >
               {option}
             </div>
