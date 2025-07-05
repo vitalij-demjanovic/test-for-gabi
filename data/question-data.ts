@@ -22,7 +22,7 @@ export const questions: Question[] = [
       'Tinka, pod vankúšom ',
       'Dunčo ho zjedol',
       'Sama, pod posteľou',
-      'Samko , v trave'
+      'Samko , v tráve'
     ],
     correctAnswer: 'Samko , v trave',
     author: 'Tinka Szucsova'
@@ -96,6 +96,19 @@ export const questions: Question[] = [
   },
   {
     id: 11,
+    question:
+      'Ako sa volajú tí naši známi v Taliansku, u ktorých sme boli dvakrát?',
+    options: [
+      'Mariano a Augusta',
+      'Vincenzo a Augusta',
+      'Mariano a Bella',
+      'Toto a Fernadita'
+    ],
+    correctAnswer: 'Mariano a Augusta',
+    author: 'Janka Baluch'
+  },
+  {
+    id: 12,
     question: 'Čo sme robili na prvom rande?',
     options: [
       'Pozerali na západ slnka',
@@ -107,21 +120,21 @@ export const questions: Question[] = [
     author: 'Vitalij'
   },
   {
-    id: 12,
+    id: 13,
     question: 'Z čoho bol vyrobený prvý prsteň, ktorý si ti daroval?',
     options: ['Polyuretan', 'Viton', 'Guma', 'Vŕba'],
     correctAnswer: 'Viton',
     author: 'Vitalij'
   },
   {
-    id: 13,
+    id: 14,
     question: 'Kedy si sa vydávala?',
     options: ['1.5.2019', '12.10.2021', '12.11.2021', '26.3.2021'],
     correctAnswer: '12.11.2021',
     author: 'Všetci'
   },
   {
-    id: 14,
+    id: 15,
     question: 'Čo je Hepatitis Epidemica',
     options: [
       'Infekčná choroba mozgu',
